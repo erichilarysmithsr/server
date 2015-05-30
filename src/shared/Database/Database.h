@@ -26,7 +26,6 @@
 #define DATABASE_H
 
 #include "revision.h"
-#include "DatabaseEnv.h"
 #include "Threading/Threading.h"
 #include "Utilities/UnorderedMapSet.h"
 #include "Database/SqlDelayThread.h"

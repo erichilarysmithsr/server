@@ -2069,7 +2069,7 @@ void World::UpdateMaxSessionCounters()
 
 void World::LoadDBVersion()
 {
-    QueryResult* result = WorldDatabase.Query("SELECT * FROM db_version LIMIT 1");
+    QueryResult* result = WorldDatabase.Query("SELECT version, structure, content FROM db_version ORDER BY version DESC, structure DESC, content DESC LIMIT 1");
     if (result)
     {
         Field* fields = result->Fetch();
